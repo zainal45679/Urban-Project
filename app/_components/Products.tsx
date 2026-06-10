@@ -1,0 +1,127 @@
+import React from "react";
+import Image from "next/image";
+import ProductCard from "./product-card";
+import img1 from "../../public/images/p1.png";
+import img2 from "../../public/images/p2.png";
+import img3 from "../../public/images/p3.png";
+import img4 from "../../public/images/p4.png";
+import img5 from "../../public/images/l1.png";
+import img6 from "../../public/images/l2.png";
+import img7 from "../../public/images/l3.png";
+import img8 from "../../public/images/l4.png";
+
+const products = [
+  {
+    image: img1,
+    name: "John Jacobs",
+    model: "Grey Full Rim Wayfarer Sunglasses",
+    price: "748.00 AED",
+    offererPrice: " 718.00 AED",
+  },
+  {
+    image: img2,
+    name: " John Jacobs",
+    model: "Black Tortoise Full Rim Rectangle",
+    price: "748.00 AED",
+    offererPrice: " 718.00 AED",
+  },
+  {
+    image: img3,
+    name: "Dolce and Gabbana",
+    model: "Square Black Sunglasses",
+    price: "248.00 AED",
+    offererPrice: "225.00 AED",
+  },
+  {
+    image: img4,
+    name: "Ray-Ban",
+    model: "Ray-Ban RB 4287 6018G",
+    price: "748.00 AED",
+    offererPrice: " 718.00 AED",
+  },
+];
+
+const lens = [
+  {
+    image: img5,
+    name: "Amara",
+    model: "AMARA Monthly Panther Eye Color",
+    price: "150.00 AED",
+  },
+  {
+    image: img6,
+    name: " Amara",
+    model: "AMARA Monthly Cream Brulee Color",
+    price: "150.00 AED",
+  },
+  {
+    image: img7,
+    name: "Amara",
+    model: "AMARA Monthly Gentel Gray Color",
+    price: "150.00 AED",
+  },
+  {
+    image: img8,
+    name: "Amara",
+    model: "AMARA Monthly Charcoal Gray Color",
+    price: "150.00 AED",
+  },
+];
+
+const Products = () => {
+  return (
+    <div>
+      <div className="px-15 py-12.5 w-full">
+        <div className=" flex justify-between items-center pb-13">
+          <div className="text-5xl items-start font-bold text-black">
+            PRODUCTS
+          </div>
+          <div>
+            <button className="bg-white text-[#CC0033] hover:bg-gray-100 font-semibold px-5 py-3 text-sm rounded-2xl">
+              VIEW ALL
+            </button>
+          </div>
+        </div>
+        <div className="grid grid-cols-4 w-full gap-6">
+          {products.map((item, i) => (
+            <ProductCard
+              id={i}
+              key={i}
+              type="product"
+              image={item.image}
+              name={item.name}
+              model={item.model}
+              offerPrice={item.offererPrice}
+              price={item.price}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="px-15  w-full">
+        <div className=" flex justify-between items-center pb-12.5">
+          <div className="text-5xl items-start font-bold text-black ">LENS</div>
+          <div>
+            <button className="bg-white text-[#CC0033] hover:bg-gray-100 font-semibold px-5 py-3 text-sm rounded-2xl">
+              VIEW ALL
+            </button>
+          </div>
+        </div>
+        <div className="grid grid-cols-4 w-full gap-6">
+          {lens.map((item, i) => (
+            <ProductCard
+              type="lens"
+              id={i}
+              key={i}
+              image={item.image}
+              name={item.name}
+              model={item.model}
+              price={item.price}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Products;
