@@ -97,7 +97,7 @@ const Products = () => {
           ))}
         </div>
       </div>
-      <div className="clamp-[px,3,15] w-full">
+      <div className="clamp-[px,3,15] pb-7 w-full">
         <div className="flex justify-between items-center max-md:px-4">
           <div className="clamp-[text,28px,50px] items-start font-bold text-black">LENS</div>
           <div>
