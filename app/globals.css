@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@plugin "tailwind-clamp" {
+  minSize: 25rem;
+  maxSize: 80rem;
+}
 
 :root {
   --background: #ffffff;

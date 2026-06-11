@@ -14,14 +14,14 @@ const products = [
   {
     image: img1,
     name: "John Jacobs",
-    model: "Grey Full Rim Wayfarer Sunglasses",
+    model: "Grey Full Rim Wayfarer",
     price: "748.00 AED",
     offererPrice: " 718.00 AED",
   },
   {
     image: img2,
     name: " John Jacobs",
-    model: "Black Tortoise Full Rim Rectangle",
+    model: "Black Tortoise Full Rim",
     price: "748.00 AED",
     offererPrice: " 718.00 AED",
   },
@@ -71,18 +71,18 @@ const lens = [
 const Products = () => {
   return (
     <div>
-      <div className="px-15 py-12.5 w-full">
-        <div className=" flex justify-between items-center pb-13">
-          <div className="text-5xl items-start font-bold text-black">
+      <div className="clamp-[py,4,12.5] clamp-[px,3,15] w-full">
+        <div className="flex justify-between items-center  max-md:px-4">
+          <div className="clamp-[text,28px,50px] items-start font-bold text-black">
             PRODUCTS
           </div>
           <div>
-            <button className="bg-white text-[#CC0033] hover:bg-gray-100 font-semibold px-5 py-3 text-sm rounded-2xl">
+            <button className="bg-white text-[#CC0033] hover:bg-gray-100 font-semibold clamp-[px,2,5] clamp-[py,1,3] clamp-[text,13px,25px] md:rounded-2xl rounded-sm">
               VIEW ALL
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-4 w-full gap-6">
+        <div className="grid lg:grid-cols-4 clamp-[gap,2,6] max-lg:grid-cols-2 clamp-[mt,2,10] w-full justify-center">
           {products.map((item, i) => (
             <ProductCard
               id={i}
@@ -97,16 +97,16 @@ const Products = () => {
           ))}
         </div>
       </div>
-      <div className="px-15  w-full">
-        <div className=" flex justify-between items-center pb-12.5">
-          <div className="text-5xl items-start font-bold text-black ">LENS</div>
+      <div className="clamp-[px,3,15] w-full">
+        <div className="flex justify-between items-center max-md:px-4">
+          <div className="clamp-[text,28px,50px] items-start font-bold text-black">LENS</div>
           <div>
-            <button className="bg-white text-[#CC0033] hover:bg-gray-100 font-semibold px-5 py-3 text-sm rounded-2xl">
+            <button className="bg-white text-[#CC0033] hover:bg-gray-100 font-semibold clamp-[px,2,5] clamp-[py,1,3] clamp-[text,13px,25px] md:rounded-2xl rounded-sm">
               VIEW ALL
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-4 w-full gap-6">
+        <div className="grid lg:grid-cols-4 clamp-[gap,2,6] max-lg:grid-cols-2 clamp-[mt,2,10] w-full justify-center">
           {lens.map((item, i) => (
             <ProductCard
               type="lens"

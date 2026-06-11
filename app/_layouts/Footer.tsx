@@ -7,7 +7,7 @@ import Twitter from "@/svgs/Twitter";
 
 const Footer = () => {
   return (
-    <div className="px-15 absolute w-full">
+    <div className="px-15 absolute w-full max-md:hidden">
       <div className="flex justify-between items-center bg-[#B2181E] w-full rounded-t-[50] p-10 pb-20 relative -bottom-12 -z-10">
         <div className="text-7xl font-semibold text-white">
           THE EYEWEAR <br /> YOU NEED

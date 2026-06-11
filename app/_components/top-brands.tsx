@@ -39,43 +39,43 @@ const TopBrands = () => {
 
 
   return (
-    <div className="flex flex-col bg-[#B2181E] py-13 px-15 pb-0">
-      <div className="flex w-full justify-between items-center pb-13">
-        <div className="text-5xl items-start font-bold text-white">
+    <div className="flex flex-col bg-[#B2181E] clamp-[py,4,12.5] clamp-[px,2,15] md:pb-0">
+      <div className="flex w-full justify-between items-center clamp-[pb,2,13] max-md:px-4">
+        <div className="clamp-[text,28px,50px] items-start font-bold text-white">
           TOP BRANDS
         </div>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center lg:gap-5 gap-2">
           <BoxArrow2
-            className={enableLeft ? `h-12 rotate-180 cursor-pointer text-gray-400/40` : `h-12 rotate-180 cursor-pointer hover:text-[#393939]`}
+            className={enableLeft ? `lg:h-12 md:h-10 h-8 rotate-180 cursor-pointer text-gray-400/40` : `lg:h-12 md:h-10 h-8 rotate-180 cursor-pointer hover:text-[#393939]`}
             onClick={handlePrev}
           />
-          <BoxArrow2 className={enableRight ? `h-12 cursor-pointer text-gray-400/40` : `h-12 cursor-pointer hover:text-[#393939]`} onClick={handleNext} />
+          <BoxArrow2 className={enableRight ? `lg:h-12 md:h-10 h-8 cursor-pointer text-gray-400/40` : `lg:h-12 md:h-10 h-8 cursor-pointer hover:text-[#393939]`} onClick={handleNext} />
         </div>
       </div>
 
-      <div className="flex">
-          <div className="relative h-150 w-[50%]">
+      <div className="flex max-md:flex-col">
+          <div className="relative md:h-110 lg:h-150 h-60 md:w-[50%]">
             <Image
               src={index == 0 ? brands[0].image : brands[2].image}
               alt={index == 0 ? brands[0].name : brands[2].name}
               fill
-              className={`object-cover rotate-y-180 rounded-tr-3xl`}
+              className={`object-cover rotate-y-180 md:rounded-tr-3xl max-md:rounded-t-xl`}
             />
-            <div className="flex items-center justify-between absolute bottom-10 left-10 w-[90%]">
-              <div className="text-3xl font-bold text-white">{index == 0 ? brands[0].name : brands[2].name}</div>
-              <BoxArrow className="rotate-90 h-15" />
+            <div className="flex items-center md:justify-between justify-end absolute lg:bottom-10 bottom-3 lg:left-10 left-3  w-[90%]">
+              <div className="clamp-[text,15px,35px] lg:font-bold font-semibold text-white">{index == 0 ? brands[0].name : brands[2].name}</div>
+              <BoxArrow className="rotate-90 lg:h-15 md:h-8 h-4" />
             </div>
           </div>
-          <div className="relative h-150 w-[50%]">
+          <div className="relative md:h-110 lg:h-150 h-60 md:w-[50%]">
             <Image
               src={index == 0 ? brands[1].image : brands[3].image}
               alt={index == 0 ? brands[1].name : brands[3].name}
               fill
-              className={`object-cover rounded-tr-3xl`}
+              className={`object-cover md:rounded-tr-3xl max-md:rounded-b-xl`}
             />
-            <div className="flex items-center justify-between absolute bottom-10 left-10 w-[90%]">
-              <div className="text-3xl font-bold text-white">{index == 0 ? brands[1].name : brands[3].name}</div>
-              <BoxArrow className="rotate-90 h-15" />
+            <div className="flex items-center md:justify-between justify-end absolute lg:bottom-10 bottom-3 lg:left-10 left-3  w-[90%]">
+              <div className="clamp-[text,15px,35px] lg:font-bold font-semibold text-white">{index == 0 ? brands[1].name : brands[3].name}</div>
+              <BoxArrow className="rotate-90 lg:h-15 md:h-8 h-4" />
             </div>
           </div>
       
