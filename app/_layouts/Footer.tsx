@@ -99,8 +99,8 @@ const Footer = () => {
             <div className="text-lg font-semibold">Follow us</div>
             <div className="flex gap-3">
               <Facebook className="text-white w-5 h-5" />
-              <Instagram />
-              <Twitter />
+              <Instagram className="text-white w-5 h-5"/>
+              <Twitter className="text-white w-5 h-5" />
             </div>
           </div>
         </div>
